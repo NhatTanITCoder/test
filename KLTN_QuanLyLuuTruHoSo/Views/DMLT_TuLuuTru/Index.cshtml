@@ -1,0 +1,78 @@
+﻿@model IEnumerable<KLTN_QuanLyLuuTruHoSo.Models.TU>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<link href="~/Template/css/css-list-btn.css" rel="stylesheet" />
+
+
+<div class="container">
+    <div class="css-inp">
+        <span>QUẢN LÝ TỦ LƯU TRỮ</span>
+    </div>
+    <p>
+        @Html.ActionLink("THÊM TỦ HỒ SƠ", "ThemTu", null, new { @class = "css-ins" })
+    </p>
+    <table class="table table-striped" style="font-family: auto;">
+        <tr style=" background-image: linear-gradient(#751c1c, #eeeedb, #951e1e); } ">
+            <th>
+                TÊN TỦ
+            </th>
+            <th>
+                SỐ NGĂN
+            </th>
+            <th>
+                SỐ KỆ ĐẶT
+            </th>
+            <th>
+                SỐ KỆ HIỆN TẠI
+            </th>
+            <th>
+                NGÀY TẠO
+            </th>
+            <th>
+                NGÀY CẬP NHẬT
+            </th>
+            <th>
+                TRẠNG THÁI
+            </th>
+            <th>
+                CHỨC NĂNG
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TENTU)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SONGAN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SLKE_DAT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SLKE_HT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NGAYTAO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NGAYCAPNHAT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TRANGTHAI)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "SuaTu", new { id = item.ID }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Xóa", "XoaTu", new { id = item.ID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

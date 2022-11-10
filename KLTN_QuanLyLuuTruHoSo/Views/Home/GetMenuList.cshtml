@@ -1,0 +1,41 @@
+﻿@using KLTN_QuanLyLuuTruHoSo.Models;
+@model List<Menu_List>
+
+<link rel="stylesheet" type="text/css" href="./Template/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./Template/css/style.css" />
+
+<ul ul class="nav flex-column">
+    @{foreach (var item in Model.Where(s => s.id_group > 0).GroupBy(Obj => new { Obj.id_group }).Distinct().ToList())
+    {
+        <li>
+            <a>
+                <i class="fa fa-desktop"></i>
+                <span>@item.FirstOrDefault().groupname</span>
+                <span class="menu-arrow"></span>
+            </a>
+            <ul>
+                @{foreach (var firstItem in (Model.Where(s => s.id_groupmenu == item.FirstOrDefault().id_group).ToList()))
+                {
+                    <li>
+                        <a href="/@firstItem.linkaction">
+                            <i class="fas fa-hand-point-right"></i>
+                            <span>@firstItem.menuname</span>
+                        </a>
+                    </li>
+                }
+                }
+            </ul>
+        </li>
+    }
+    }
+
+</ul>
+
+@*<script>
+    $(function () {
+        $(".wrapper").on('click', '.menu li a', function () {
+            $('.menu li').removeClass("active");
+            $(this).parent().addClass("active");
+        })
+    });
+</script>*@

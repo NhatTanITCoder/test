@@ -1,0 +1,62 @@
+﻿@model KLTN_QuanLyLuuTruHoSo.Models.TU
+
+@{
+    ViewBag.Title = "SuaTu";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="container">
+    <h2>SỬA TỦ LƯU TRỮ</h2>
+@using (Html.BeginForm("XuLySuaTu", "DMLT_TuLuuTru", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.ID)
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    TÊN TỦ
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.TENTU, new { @class = "form-control" })
+                </td>
+                <td>
+                    SỐ NGĂN
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.SONGAN, new { @class = "form-control" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    SỐ KỆ ĐẶT
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.SLKE_DAT, new { @class = "form-control" })
+                </td>
+                <td>
+                    SỐ KỆ HIỆN TẠI
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.SLKE_HT, new { @class = "form-control" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    TRẠNG THÁI
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.TRANGTHAI, new { @class = "form-control" })
+                </td>
+                <td colspan="2">
+                    <p>
+                        <input type="submit" value="LƯU" class="btn btn-danger " />
+
+                    </p>
+                </td>
+            </tr>
+        </table>
+}
+</div>
+
+

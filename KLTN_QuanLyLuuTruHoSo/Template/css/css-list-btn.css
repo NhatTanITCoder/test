@@ -1,0 +1,16 @@
+﻿body {
+}
+.css-ins{
+    font-weight: 700;
+    background-color: #30ebe7;
+    padding: 10px;
+    border-radius: 5px;
+}
+.css-ins:hover{
+    background-color:#1d98d4;
+}
+.css-inp{
+    font-weight: 700;
+    font-size:20px;
+    text-align:center;
+}

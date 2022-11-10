@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" type="text/css" href="~/Template/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Template/css/style.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="~/Template/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Template/css/bootstrap-datetimepicker.min.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="~/Template/css/ck-style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .loader {
+            position: fixed;
+            top: 35%;
+            left: 50%;
+        }
+
+        /*begin - custom*/
+        a:hover {
+            cursor: pointer;
+        }
+
+        #spantenchucnang {
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        #dropProfile .dropdown-item {
+            padding: 0.5rem 1.5rem;
+        }
+
+        #dropProfile i {
+            font-size: 15px;
+        }
+        /*end - custom*/
+    </style>
+
+
+    <script src="~/Template/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Template/js/jquery.dataTables.min.js"></script>
+    <script src="~/Template/js/popper.min.js"></script>
+    <script src="~/Template/js/bootstrap.min.js"></script>
+    <script src="~/Template/js/jquery.slimscroll.js"></script>
+    <script src="~/Template/js/app.js"></script>
+
+    <script src="~/Template/js/select2.min.js"></script>
+    <script src="~/Template/js/moment.min.js"></script>
+    <script src="~/Template/js/bootstrap-datetimepicker.min.js"></script>
+</head>
+@using KLTN_QuanLyLuuTruHoSo.Models;
+<body>
+    <div class="main-wrapper">
+
+        <!------------------------- BEGIN HEADER ------------------------->
+        <div class="header">
+            <div class="header-left">
+                <a href="/Home/Index" class="logo">
+                    <img src="~/Template/images/Logo_TDT.png" style="width: 40%; height: 95%; " />
+                    <span>TDT</span>
+                </a>
+            </div>
+
+            <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+
+
+            <ul class="nav user-menu float-right">
+
+                <!--- Begin notification --->
+                <li class="nav-item dropdown d-none d-sm-block" style="opacity: 0;">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown1">
+                        <i class="fas fa-question-circle" style="font-size: 23px; color: #e8e8e8;"></i>
+                        <span class="badge badge-pill bg-danger float-right">3</span>
+                    </a>
+                </li>
+
+                @*Đăng xuất*@
+                <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <div class="user-img">
+                            @{
+                                if (Session["user"] != null)
+                                {
+                                    var us = Session["user"] as USER;
+                                    <span> @us.TENUSER </span>
+                                <span>
+                                    <img src="~/Template/images/user.png" style="width:45px; height:45px" />
+                                </span>
+                                }
+                             }                           
+                        </div>
+                    </a>
+                    <div class="dropdown-menu"  style=""  >
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-id-card mr-1"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-user-edit mr-1"></i>
+                            <span>Edit Profile</span>
+                        </a>
+                        <a class="dropdown-item" href="/Home/DangXuat">
+                            <i class="fas fa-sign-out-alt mr-1"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </li>
+            </ul> 
+
+            <!--- Begin User-mobile --->
+            <div class="dropdown mobile-user-menu float-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"
+                       onclick="loadframe('UseCase/Profile_Info.aspx','My Profile')">
+                        <i class="far fa-id-card mr-1"></i>
+                        <span>My Profile</span>
+                    </a>
+                    <a class="dropdown-item" href="#"
+                       onclick="loadframe('UseCase/Profile_Edit.aspx','Edit Profile')">
+                        <i class="fas fa-user-edit mr-1"></i>
+                        <span>Edit Profile</span>
+                    </a>
+                    <a class="dropdown-item" href="#"
+                       onclick="loadframe('changepassword.aspx','Change Password')">
+                        <i class="fas fa-sign-out-alt mr-1"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+            <!--- End User-mobile --->
+        </div>
+        <!------------------------- END HEADER ------------------------->
+        <!------------------------- BEGIN SIDEBAR ------------------------->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    @Html.Action("GetMenuList", "Home")
+                </div>
+            </div>
+            <!-- Ends class sidebar-inner -->
+        </div>
+        <!------------------------- END SIDEBAR ------------------------->
+        <!------------------------- BEGIN CONTENT ------------------------->
+        <div class="page-wrapper">
+            <div class="content" style="padding-bottom: 0; padding-top: 10px;">
+                <!--- Begin Content-Header --->
+                <div class="page-heading">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-breadcrumb">
+                                <span id="spantenchucnang">
+                                    <asp:Literal ID="Literal3" runat="server" Text="Home"></asp:Literal>
+                                </span>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                <!--- End Content-Header --->
+                <!--- Begin Content-Main --->
+                <div id="divframe">
+                    <div>
+                        @RenderBody()
+                    </div>
+                </div>
+                <!--- End Content-Main --->
+
+            </div>
+        </div>
+        <!------------------------- END CONTENT ------------------------->
+
+    </div>
+
+</body>
+</html>

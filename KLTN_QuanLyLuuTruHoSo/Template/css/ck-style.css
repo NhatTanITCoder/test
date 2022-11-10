@@ -1,0 +1,847 @@
+﻿.highcharts-credits {
+    display: none !important;
+}
+.ck-hover {
+    cursor: pointer;
+}
+.input-group-text label[for]:hover {
+    cursor: pointer;
+}
+
+/*--------------BEGIN Avatar--------------*/
+.ck-avatar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.ck-avatar--img {
+    /*background-image: url(../TemplateMH/images/img/doctor-thumb-01.jpg);*/
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ck-avatar input[type="file"] {
+    display: none;
+}
+
+.ck-avatar label {
+    display: none;
+    font-size: 27px;
+    color: #505050;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.ck-avatar:hover .ck-avatar--img {
+    opacity: 0.6;
+}
+
+.ck-avatar:hover label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.ck-avatar label:hover {
+    cursor: pointer;
+}
+/*--------------END Avatar--------------*/
+
+
+/*--------------BEGIN form-group--------------*/
+.ck-form-label { /**/
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.ck-form-group:nth-child(1) { /**/
+    margin-bottom: 10px;
+}
+
+
+
+/*.form-group .riTextBox {
+    padding: 0 !important;
+}*/
+.form-group .rcbInputCell {
+    padding: 0 !important;
+}
+
+.ck-form-group--picker {
+    width: 100%;
+}
+
+    .ck-form-group--picker input {
+        border: none !important;
+    }
+
+/*RadNumericTextBox*/
+.ck-form-group--numeric {
+    width: 100%;
+}
+
+    .ck-form-group--numeric > span {
+        width: 100% !important;
+    }
+
+        .ck-form-group--numeric > span > .riTextBox {
+            height: 50px !important;
+            padding: 21px 12px 6px !important;
+        }
+
+/*RadComboBox*/
+.form-group .rcbInputCellLeft {
+    border: none !important;
+    background: unset !important;
+    box-shadow: unset !important;
+}
+
+.form-group .rcbArrowCellRight {
+    border: none !important;
+    background: unset !important;
+    box-shadow: none !important;
+}
+
+    .form-group .rcbArrowCellRight a {
+        bottom: 7px;
+    }
+/*.form-group input:focus {
+    outline: 0 !important;
+    border-color: #e2cfcf !important;
+    box-shadow: 0 0 0 0.2rem rgb(112 16 16 / 10%) !important;
+}*/
+
+.pre-cbb {
+    height: 28px;
+    width: 135px !important;
+}
+/*--------------END form-group--------------*/
+
+
+
+
+/*--------------BEGIN input[type='radio']--------------*/
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    padding: 1.3px;
+    background-clip: content-box;
+    border: 1px solid #9d9d9d;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+    input[type="radio"]:checked {
+        background-color: var(--color-theme) !important;
+        border-color: var(--color-theme) !important;
+    }
+
+input[type="radio"]:hover {
+    cursor: pointer;
+}
+label[for*="rdo"]:hover {
+    cursor: pointer;
+}
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+label[for*="ckb"]:hover {
+    cursor: pointer;
+}
+/*--------------END input[type='radio']--------------*/
+
+
+
+
+/*--------------BEGIN input[type='file']--------------*/
+input[type="file"] {
+    padding: 0;
+}
+/*--------------END input[type='file']--------------*/
+
+
+
+/*--------------BEGIN Grid--------------*/
+/*CSS Grid*/
+.rgDataDiv {
+    overflow-y: hidden !important;
+}
+
+    .rgDataDiv > table > tbody {
+        font-weight: 300;
+        color: #000000;
+    }
+
+.RadGrid_Silk .rgCommandRow {
+    background-image: none !important;
+}
+
+.rgHeader {
+    font-weight: 700 !important;
+}
+
+.RadGrid_Silk .rgHeader, .RadGrid_Silk th.rgResizeCol, .RadGrid_Silk .rgHeaderWrapper, .RadGrid_Silk .rgFilterRow {
+    background-color: #FFF !important;
+    border: none !important;
+    border-top: 1px solid #701010 !important;
+    border-bottom: 2px solid #701010 !important;
+    min-height: 50px;
+}
+
+.RadGrid_Silk .rgRow > td, .RadGrid_Silk .rgAltRow > td, .RadGrid_Silk .rgEditRow > td {
+    height: 50px !important;
+    border-bottom: 1px solid #701010 !important;
+}
+
+.RadGrid_Silk .rgPagerCell {
+    background: #FFFFFF !important;
+}
+
+.rgExpandCol {
+    background: #eeeeee !important;
+}
+
+.bg-expand {
+    background: #eeeeee !important;
+}
+
+
+.RadGrid_Silk {
+    border: none !important;
+}
+
+    .RadGrid_Silk .rgCommandTable td {
+        border: 0 !important;
+        padding: 10px 0px !important;
+        background: #fafafa !important;
+    }
+
+    .RadGrid_Silk .rgCommandRow a[id$="_InitInsertButton"] {
+        color: #333 !important;
+        text-decoration: none !important;
+        background: #ffbc34 !important;
+        border: 1px solid #ffbc34 !important;
+        border-radius: 5px !important;
+        padding: 6px 15px !important;
+        text-transform: uppercase !important;
+    }
+
+        .RadGrid_Silk .rgCommandRow a[id$="_InitInsertButton"]:hover {
+            background: #e9ab2e !important;
+            border: 1px solid #e9ab2e !important;
+        }
+
+        .RadGrid_Silk .rgCommandRow a[id$="_InitInsertButton"]:before {
+            content: '\f0fe' !important;
+            font-weight: 400 !important;
+            font-family: 'Font Awesome 6 Free' !important;
+            color: #333 !important;
+            font-size: 13px !important;
+            margin-right: 5px !important;
+        }
+
+.rgCommandRow {
+    height: 45px !important;
+    background: unset !important;
+}
+
+.ck-radgrid-button-add {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #ffbc34 !important;
+    border: 1px solid #ffbc34 !important;
+    border-radius: 5px !important;
+    padding: 6px 15px !important;
+    text-transform: uppercase !important;
+}
+
+    .ck-radgrid-button-add:hover {
+        background: #e9ab2e !important;
+        border: 1px solid #e9ab2e !important;
+    }
+
+    .ck-radgrid-button-add:before {
+        content: '\f0fe' !important;
+        font-weight: 400 !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        color: #333 !important;
+        font-size: 13px !important;
+        margin-right: 5px !important;
+    }
+
+.ck-radgrid-button-export {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #ffbc34 !important;
+    border: 1px solid #ffbc34 !important;
+    border-radius: 5px !important;
+    padding: 6px 15px !important;
+    text-transform: uppercase !important;
+}
+
+    .ck-radgrid-button-export:hover {
+        background: #e9ab2e !important;
+        border: 1px solid #e9ab2e !important;
+    }
+
+    .ck-radgrid-button-export:before {
+        content: '\f1c3' !important;
+        font-weight: 400 !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        color: #333 !important;
+        font-size: 13px !important;
+        margin-right: 5px !important;
+    }
+
+.ck-radgrid-button-see {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #ffbc34 !important;
+    border: 1px solid #ffbc34 !important;
+    border-radius: 5px !important;
+    padding: 6px 15px !important;
+    text-transform: uppercase !important;
+}
+
+    .ck-radgrid-button-see:hover {
+        background: #e9ab2e !important;
+        border: 1px solid #e9ab2e !important;
+    }
+
+    .ck-radgrid-button-see:before {
+        content: '\f06e' !important;
+        font-weight: 400 !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        color: #333 !important;
+        font-size: 13px !important;
+        margin-right: 5px !important;
+    }
+/*Form edit Grid*/
+div[class="rgEditForm"] > table > tbody > tr:last-child {
+    height: 50px !important;
+}
+
+    div[class="rgEditForm"] > table > tbody > tr:last-child a:hover {
+        background: #e9ab2e !important;
+        border: 1px solid #e9ab2e !important;
+    }
+
+
+
+/*Button Cập nhật, Hủy*/
+a[id$="_UpdateButton"], a[id$="_PerformInsertButton"], a[id$="_CancelButton"] {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #ffbc34 !important;
+    border: 1px solid #ffbc34 !important;
+    border-radius: 5px !important;
+    padding: 6px 10px !important;
+    text-transform: uppercase !important;
+}
+
+    a[id$="_PerformInsertButton"]:before {
+        content: '\f055' !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        color: #333 !important;
+        font-size: 15px !important;
+    }
+
+    a[id$="_UpdateButton"]:before {
+        content: '\f055' !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        color: #333 !important;
+        font-size: 15px !important;
+    }
+
+    a[id$="_CancelButton"]:before {
+        content: '\f057' !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        color: #333 !important;
+        font-size: 15px !important;
+    }
+
+/*Collapse*/
+.accordian-body {
+    font-size: 13px;
+}
+
+    .accordian-body h5 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+
+        .accordian-body h5 + p {
+            color: #9e9e9e;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+
+    .accordian-body span {
+        color: #a2a2a2 !important;
+        white-space: normal !important;
+    }
+
+
+.ckradgrid-btn-add {
+    font-size: 14px !important;
+    color: green !important;
+}
+
+.ckradgrid-btn-add--header {
+    border: 1px solid green;
+    color: green !important;
+    padding: 3px 7px 3px 7px;
+    border-radius: 5px;
+}
+
+    .ckradgrid-btn-add--header > i {
+        color: green !important;
+    }
+
+    .ckradgrid-btn-add--header > span {
+        color: green !important;
+    }
+
+    .ckradgrid-btn-add--header:hover {
+        background: #e3fde3;
+    }
+
+.ckradgrid-btn-delete {
+    font-size: large !important;
+    color: #701010 !important;
+}
+
+    .ckradgrid-btn-delete > i {
+        font-weight: 100 !important;
+    }
+/*--------------END Grid--------------*/
+
+
+
+
+/*--------------BEGIN Button--------------*/
+.ck-button {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #ffbc34 !important;
+    border: 1px solid #ffbc34 !important;
+    border-radius: 5px !important;
+    padding: 7px 15px !important;
+    line-height: 34px;
+}
+
+    .ck-button:hover {
+        background: #e9ab2e !important;
+        border: 1px solid #e9ab2e !important;
+    }
+
+    .ck-button i {
+        margin-right: 3px;
+    }
+
+    .ck-button > i[class="fa-solid fa-floppy-disk"] {
+        font-weight: 300 !important;
+    }
+
+.ck-button--search {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #ffbc34 !important;
+    border: 1px solid #ffbc34 !important;
+    border-radius: 5px !important;
+    padding: 14px 15px !important;
+    line-height: 50px;
+}
+
+    .ck-button--search:before {
+        content: '\f002' !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        font-weight: 600;
+        margin-right: 3px;
+    }
+
+    .ck-button--search:hover {
+        background: #e9ab2e !important;
+        border: 1px solid #e9ab2e !important;
+    }
+
+
+.ck-button--export {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #FFF !important;
+    border: 1px solid #767676 !important;
+    border-radius: 5px !important;
+    padding: 14px 15px !important;
+    line-height: 50px;
+}
+
+    .ck-button--export:before {
+        content: '\f1c3' !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
+    .ck-button--export:hover {
+        background: #f3f3f3 !important;
+        border: 1px solid #767676 !important;
+    }
+.ck-button--print {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #FFF !important;
+    border: 1px solid #767676 !important;
+    border-radius: 5px !important;
+    padding: 0px 15px !important;
+    line-height: 47px !important;
+    font-size: 14px !important;
+}
+.ck-button--print:hover {
+    cursor: pointer;
+    background: #f3f3f3 !important;
+    border: 1px solid #767676 !important;
+}
+
+.RadUpload_Silk .ruButtonHover {
+    background-image: linear-gradient(#bd7070,#701010) !important;
+    border-color: #701010 !important;
+}
+
+.ck-button--grid {
+    color: #333 !important;
+    text-decoration: none !important;
+    background: #ffbc34 !important;
+    border: 1px solid #ffbc34 !important;
+    border-radius: 5px !important;
+    padding: 3px 6px 3px 9px !important;
+    line-height: 34px;
+    font-weight: 400;
+}
+    .ck-button--grid:hover {
+        background: #e9ab2e !important;
+        border: 1px solid #e9ab2e !important;
+    }
+
+    .ck-button--grid i {
+        margin-right: 5px;
+    }
+
+    .ck-button--grid > i[class="fa-solid fa-floppy-disk"] {
+        font-weight: 300 !important;
+    }
+/*--------------END Button--------------*/
+
+
+
+
+/*--------------BEGIN CARD--------------*/
+.ck-card-header {
+    background-color: #fbf4f4 !important;
+    padding: 1px 10px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: var(--color-theme) !important;
+    /*margin-top: 10px;*/
+}
+
+.ck-card-body {
+    padding: 10px !important;
+    border: 1px solid #eee !important;
+    border-top: none !important;
+    border-radius: 3px !important;
+}
+/*--------------END CARD--------------*/
+
+
+
+
+/*--------------BEGIN Tabstrip--------------*/
+.rtsLink {
+    height: 45px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #495057 !important;
+    font-size: 16px !important;
+    border-color: #eaeaea !important;
+    background-color: #fff !important;
+    background-image: unset !important;
+    border-bottom-color: #eaeaea !important;
+    border-bottom-width: 3px !important;
+}
+
+.RadTabStrip.rtsTop .rtsLevel1 .rtsSelected .rtsLink {
+    border-bottom-color: #701010 !important;
+    border-bottom-width: 2px !important;
+}
+
+.RadTabStrip_Default .rtsLevel1 .rtsHovered .rtsLink {
+    /*background-image: linear-gradient(#fefefe,#eaeaea) !important;*/
+    background-color: #f5f5f5 !important;
+}
+
+.RadTabStrip_Default .rtsLevel1 .rtsSelected .rtsLink:hover {
+    background-image: unset !important;
+}
+
+/*--icon tabs item--*/
+.ck-tab-item--icon .rtsTxt:before {
+    content: '\f3d1';
+    font-family: 'Font Awesome 6 Free';
+    margin-right: 8px;
+}
+
+.asp-tabs-solid > .rtsLink {
+    height: 45px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #333 !important;
+    font-size: 0.875rem !important;
+    border-color: #fafafa !important;
+    border-radius: unset !important;
+    background-color: #fafafa !important;
+    background-image: unset !important;
+    border-width: unset !important;
+    border-style: unset !important;
+}
+
+.RadTabStrip.RadTabStrip_Default.rtsTop .rtsLevel1 .asp-tabs-solid.rtsSelected .rtsLink {
+    background-color: #701010 !important;
+    color: #fff !important;
+}
+
+.rtsTxt {
+    font-size: 14px;
+}
+
+.RadTabStrip_Telerik .rtsLevel1 {
+    border-bottom-color: #dee2e6 !important;
+}
+
+/*----nav template----*/
+.ck-nav-container {
+    font-size: 16px;
+    background: #fff;
+}
+
+    .ck-nav-container .nav-justified .nav-item {
+        flex-basis: unset !important;
+    }
+
+    .ck-nav-container .ck-nav-justified {
+        font-size: 0.875rem;
+        background-color: #fafafa;
+    }
+/*----tabs top-bot ----*/
+@media (min-width: 576px) {
+    .cktabstrip-top .rtsUL {
+        display: flex;
+    }
+
+        .cktabstrip-top .rtsUL > li {
+            flex: 1;
+        }
+
+    .cktabstrip-bot .rtsUL {
+        display: flex;
+    }
+
+        .cktabstrip-bot .rtsUL > li {
+            flex: 1;
+        }
+}
+
+.cktabstrip-top .rtsLink {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom-width: 1px !important;
+}
+
+.cktabstrip-top .rtsTxt {
+    font-size: 16px !important;
+    color: var(--color-theme);
+}
+
+.cktabstrip-bot .rtsLink {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom-width: 1px !important;
+}
+
+.cktabstrip-bot .rtsTxt {
+    font-size: 15px !important;
+    text-align: center;
+}
+
+/*--------------END Tabstrip--------------*/
+
+
+
+
+
+/*--------------BEGIN Status in Grid--------------*/
+[class*="ck-status-grid"] {
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 12px;
+    min-width: 95px;
+    padding: 1px 10px;
+    text-align: center;
+}
+.ck-status-grid--green {
+    background-color: #e5faf3;
+    border: 1px solid #00ce7c;
+    color: #00ce7c;
+}
+
+.ck-status-grid--red {
+    background-color: #ffe5e6;
+    border: 1px solid #fe0000;
+    color: #fe0000;
+}
+
+.ck-status-grid--blue {
+    background-color: #d7edff;
+    border: 1px solid #0479dd;
+    color: #0479dd;
+}
+
+.ck-status-grid--gray {
+    background-color: #e4e4e4;
+    border: 1px solid #787878;
+    color: #787878;
+}
+/*--------------END Status in Grid--------------*/
+
+
+
+/*--------------BEGIN Filter in Grid--------------*/
+.RadMenu.RadMenu_Silk {
+    top: 15px !important;
+    max-height: 95vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.rmLink:hover {
+    background-image: linear-gradient(#a46666,#a03434) !important;
+}
+
+.rmFocused {
+    background-image: linear-gradient(#a46666,#a03434) !important;
+}
+/*--------------END Filter in Grid--------------*/
+
+
+
+/*--------------BEGIN ASP: RadUpload--------------*/
+.ruInputs > li {
+    height: 100%;
+}
+
+    .ruInputs > li > span {
+        height: 100% !important;
+        display: flex !important;
+    }
+
+        .ruInputs > li > span > .ruFakeInput {
+            flex: 1 !important;
+        }
+
+        .ruInputs > li > span > input:last-child {
+            height: 38px !important;
+        }
+
+            .ruInputs > li > span > input:last-child:hover {
+                background-image: linear-gradient(#bd7070,#701010) !important;
+                border-color: #701010 !important;
+                color: #fff !important;
+            }
+
+.RadUpload_Silk .ruStyled .ruFakeInput {
+    height: 30px !important;
+    border-radius: 0.25rem;
+    border-color: #ced4da;
+}
+
+/*RadAsyncUpload*/
+.RadUpload .ruInputs > li {
+    display: flex;
+}
+
+.RadUpload .ruButton.ruBrowse {
+    height: 37px;
+}
+
+.RadUpload .ruFileWrap.ruStyled {
+    width: 100%;
+}
+
+    .RadUpload .ruFileWrap.ruStyled > ruFakeInput.radPreventDecorate {
+        flex: 1;
+    }
+/*--------------END ASP: RadUpload--------------*/
+
+/*--------------BEGIN Combobox--------------*/
+.RadComboBoxDropDown_Bootstrap .rcbItem {
+    margin: 0 !important;
+    padding: 8px 10px !important;
+}
+
+.RadComboBoxDropDown_Bootstrap .rcbHovered, .RadComboBoxDropDown_Bootstrap .rcbCheckAllItemsHovered {
+    margin: 0;
+    padding: 8px 10px !important;
+    color: #000;
+    background-color: #5897fb !important;
+}
+
+.rcbCheckAllItems {
+    padding: 8px 10px !important;
+}
+/*--------------END Combobox--------------*/
+
+
+/*--------------BEGIN Detail Report--------------*/
+.ck-detail-info {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.ck-detail-info li {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.ck-detail-info li .title {
+    color: #515365;
+    font-weight: 500;
+    margin-right: 10px;
+    flex-basis: 30%;
+}
+
+.ck-detail-info li .text {
+    color: #888da8;
+    display: block;
+    overflow: hidden;
+    flex: 1;
+}
+/*--------------END Detail Report--------------*/

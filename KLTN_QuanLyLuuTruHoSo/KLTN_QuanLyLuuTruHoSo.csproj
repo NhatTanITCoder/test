@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28FFC391-F475-492E-B2FE-4BB70BAACEB1}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KLTN_QuanLyLuuTruHoSo</RootNamespace>
+    <AssemblyName>KLTN_QuanLyLuuTruHoSo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DMLT_TuLuuTruController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menu_List.cs" />
+    <Compile Include="Models\QLLuuTruHoSo.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLLuuTruHoSo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\bootstrap\js\jquery-3.3.1.min.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Models\QLLuuTruHoSo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLLuuTruHoSo.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Template\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Template\css\bootstrap.min.css" />
+    <Content Include="Template\css\ck-style.css" />
+    <Content Include="Template\css\css-list-btn.css" />
+    <Content Include="Template\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Template\css\font-awesome.min.css" />
+    <Content Include="Template\css\footable.bootstrap.css" />
+    <Content Include="Template\css\footable.bootstrap.min.css" />
+    <Content Include="Template\css\fullcalendar.css" />
+    <Content Include="Template\css\fullcalendar.min.css" />
+    <Content Include="Template\css\select2.min.css" />
+    <Content Include="Template\css\spreadsheet.css" />
+    <Content Include="Template\css\spreadsheet.min.css" />
+    <Content Include="Template\css\style.css" />
+    <Content Include="Template\css\tagsinput.css" />
+    <Content Include="Template\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="Template\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="Template\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="Template\fonts\ionicons.svg" />
+    <Content Include="Template\fonts\revicons\revicons.svg" />
+    <Content Include="Template\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Template\fonts\weathericons-regular-webfont.html" />
+    <Content Include="Template\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Template\images\about-1.jpg" />
+    <Content Include="Template\images\Background_Login.png" />
+    <Content Include="Template\images\calander.png" />
+    <Content Include="Template\images\clock.png" />
+    <Content Include="Template\images\img\attachment.png" />
+    <Content Include="Template\images\img\blog\blog-01.jpg" />
+    <Content Include="Template\images\img\blog\blog-02.jpg" />
+    <Content Include="Template\images\img\blog\blog-03.jpg" />
+    <Content Include="Template\images\img\blog\blog-04.jpg" />
+    <Content Include="Template\images\img\blog\blog-thumb-01.jpg" />
+    <Content Include="Template\images\img\blog\blog-thumb-02.jpg" />
+    <Content Include="Template\images\img\blog\blog-thumb-03.jpg" />
+    <Content Include="Template\images\img\blog\blog-thumb-04.jpg" />
+    <Content Include="Template\images\img\calander.png" />
+    <Content Include="Template\images\img\favicon.ico" />
+    <Content Include="Template\images\img\Login.png" />
+    <Content Include="Template\images\img\logo-dark.png" />
+    <Content Include="Template\images\img\logo.png" />
+    <Content Include="Template\images\img\placeholder-thumb.jpg" />
+    <Content Include="Template\images\img\placeholder.jpg" />
+    <Content Include="Template\images\img\sent.png" />
+    <Content Include="Template\images\img\user.jpg" />
+    <Content Include="Template\images\Login.jpg" />
+    <Content Include="Template\images\Logo_TDT.png" />
+    <Content Include="Template\images\user.png" />
+    <Content Include="Template\js\app.js" />
+    <Content Include="Template\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Template\js\bootstrap.min.js" />
+    <Content Include="Template\js\calendar-basic-init.js" />
+    <Content Include="Template\js\calendar-external-events-init.js" />
+    <Content Include="Template\js\calendar-list-init.js" />
+    <Content Include="Template\js\Chart.bundle.js" />
+    <Content Include="Template\js\chart.js" />
+    <Content Include="Template\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Template\js\footable.js" />
+    <Content Include="Template\js\footable.min.js" />
+    <Content Include="Template\js\fullcalendar.min.js" />
+    <Content Include="Template\js\jquery-3.2.1.min.js" />
+    <Content Include="Template\js\jquery-ui.min.html" />
+    <Content Include="Template\js\jquery.dataTables.min.js" />
+    <Content Include="Template\js\jquery.fullcalendar.js" />
+    <Content Include="Template\js\jquery.slimscroll.js" />
+    <Content Include="Template\js\moment.min.js" />
+    <Content Include="Template\js\popper.min.js" />
+    <Content Include="Template\js\select2.min.js" />
+    <Content Include="Template\js\spreadsheet.js" />
+    <Content Include="Template\js\spreadsheet.min.js" />
+    <Content Include="Template\js\tagsinput.js" />
+    <Content Include="Template\js\toggle table testing.html" />
+    <Content Include="Template\plugins\light-gallery\css\lightgallery.min.css" />
+    <Content Include="Template\plugins\light-gallery\fonts\lgd641.svg" />
+    <Content Include="Template\plugins\light-gallery\img\loading.gif" />
+    <Content Include="Template\plugins\light-gallery\img\video-play.png" />
+    <Content Include="Template\plugins\light-gallery\img\vimeo-play.png" />
+    <Content Include="Template\plugins\light-gallery\img\youtube-play.png" />
+    <Content Include="Template\plugins\light-gallery\js\lightgallery-all.min.js" />
+    <Content Include="Template\plugins\summernote\dist\summernote-bs4.css" />
+    <Content Include="Template\plugins\summernote\dist\summernote-bs4.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\activities.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-appointment.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-asset.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-blog.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-department.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-doctor.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-employee.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-expense.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-holiday.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-leave-type.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-leave.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-patient.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-provident-fund.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-role.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-salary.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-schedule.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\add-tax.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\appointments.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\css\bootstrap.min.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\css\font-awesome.min.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\css\fullcalendar.min.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\css\select2.min.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\css\style.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\css\tagsinput.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\attachment.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\blog\blog-01.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\blog\blog-02.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\blog\blog-03.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\blog\blog-04.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\blog\blog-thumb-01.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\blog\blog-thumb-02.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\blog\blog-thumb-03.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\blog\blog-thumb-04.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\calander.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\clock.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-03.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-01.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-02.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-03.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-04.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-05.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-06.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-07.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-08.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-09.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-10.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-11.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\doctor-thumb-12.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\favicon.ico" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\logo-dark.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\logo.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\patient-thumb-01.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\patient-thumb-02.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\placeholder-thumb.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\placeholder.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\sent.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\user-02.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\user-03.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\user-04.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\user-05.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\user-06.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\user.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\img\video-call.jpg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\app.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\bootstrap.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\Chart.bundle.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\chart.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\fullcalendar.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\jquery-3.2.1.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\jquery-ui.min.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\jquery.dataTables.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\jquery.fullcalendar.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\jquery.slimscroll.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\moment.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\popper.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\select2.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\js\tagsinput.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\css\lightgallery.min.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\fonts\lgd641.svg" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\img\loading.gif" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\img\video-play.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\img\vimeo-play.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\img\youtube-play.png" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\js\lightgallery-all.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\summernote\dist\summernote-bs4.css" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\summernote\dist\summernote-bs4.min.js" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\attendance.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\blank-page.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\blog-details.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\blog.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\calendar.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\change-password.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\change-password2.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\chat.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\compose.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\create-invoice.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\departments.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\doctors.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-appointment.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-asset.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-blog.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-department.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-doctor.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-employee.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-expense.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-holiday.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-invoice.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-leave-type.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-leave.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-patient.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-profile.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-provident-fund.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-role.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-salary.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-schedule.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\edit-tax.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\email-settings.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\employees.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\error-404.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\error-500.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\expense-reports.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\expenses.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\forgot-password.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\form-basic-inputs.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\form-horizontal.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\form-input-groups.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\form-vertical.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\gallery.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\holidays.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\inbox.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\incoming-call.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\index-2.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\index.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\invoice-reports.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\invoice-settings.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\invoice-view.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\invoices.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\leave-type.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\leaves.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\localization.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\lock-screen.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\login.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\mail-view.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\notifications-settings.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\patients.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\payments.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\profile.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\provident-fund.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\register.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\roles-permissions.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\salary-settings.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\salary-view.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\salary.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\schedule.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\settings.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\tables-basic.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\tables-datatables.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\tabs.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\taxes.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\theme-settings.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\typography.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\uikit.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\video-call.html" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\voice-call.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Template\fonts\dhxicons-webfont.eot" />
+    <Content Include="Template\fonts\dhxicons-webfont.woff2" />
+    <Content Include="Template\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Template\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Template\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Template\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Template\fonts\ionicons.eot" />
+    <Content Include="Template\fonts\ionicons.ttf" />
+    <Content Include="Template\fonts\ionicons.woff" />
+    <Content Include="Template\fonts\revicons\revicons.eot" />
+    <Content Include="Template\fonts\revicons\revicons.ttf" />
+    <Content Include="Template\fonts\revicons\revicons.woff" />
+    <Content Include="Template\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Template\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Template\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Template\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="Template\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Template\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Template\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Template\fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="Template\js\appsMailbox.json" />
+    <Content Include="Template\js\bootstrap_table_test.json" />
+    <Content Include="Template\js\bootstrap_table_test2.json" />
+    <Content Include="Template\js\cities.json" />
+    <Content Include="Template\js\countries.json" />
+    <Content Include="Template\js\datatables_ajax.json" />
+    <Content Include="Template\js\datatables_ajax_obj.json" />
+    <Content Include="Template\js\editable.json" />
+    <Content Include="Template\js\message2.json" />
+    <Content Include="Template\js\tablesFootableLoadingRows-1.json" />
+    <Content Include="Template\js\tablesFootableLoadingRows-2.json" />
+    <Content Include="Template\js\tablesFootableLoadingRows-3.json" />
+    <Content Include="Template\js\table_base.json" />
+    <Content Include="Template\js\taskboard.json" />
+    <Content Include="Template\js\treeview_jstree.json" />
+    <Content Include="Template\plugins\light-gallery\fonts\lgd41d.eot" />
+    <Content Include="Template\plugins\light-gallery\fonts\lgd641.eot" />
+    <Content Include="Template\plugins\light-gallery\fonts\lgd641.ttf" />
+    <Content Include="Template\plugins\light-gallery\fonts\lgd641.woff" />
+    <Content Include="Template\plugins\summernote\dist\font\summernote4c4d.eot" />
+    <Content Include="Template\plugins\summernote\dist\font\summernote4c4d.ttf" />
+    <Content Include="Template\plugins\summernote\dist\font\summernote4c4d.woff" />
+    <Content Include="Template\plugins\summernote\dist\font\summernoted41d.eot" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\fonts\lgd41d.eot" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\fonts\lgd641.eot" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\fonts\lgd641.ttf" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\light-gallery\fonts\lgd641.woff" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\summernote\dist\font\summernote4c4d.eot" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\summernote\dist\font\summernote4c4d.ttf" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\summernote\dist\font\summernote4c4d.woff" />
+    <Content Include="Template\Preclinic-Hospital-Bootstrap4-Admin\assets\plugins\summernote\dist\font\summernoted41d.eot" />
+    <Content Include="Template\textedit - navbar\Color.rtf" />
+    <Content Include="Views\Home\GetMenuList.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\DMLT_TuLuuTru\Index.cshtml" />
+    <Content Include="Views\DMLT_TuLuuTru\ThemTu.cshtml" />
+    <Content Include="Views\DMLT_TuLuuTru\SuaTu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\QLLuuTruHoSo.dbml.layout">
+      <DependentUpon>QLLuuTruHoSo.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55919</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55876/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

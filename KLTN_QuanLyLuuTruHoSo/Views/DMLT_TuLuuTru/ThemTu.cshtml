@@ -1,0 +1,73 @@
+﻿@model KLTN_QuanLyLuuTruHoSo.Models.TU
+
+@{
+    ViewBag.Title = "ThemTu";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<link href="~/Template/css/css-list-btn.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="text-center">
+        <h2>THÊM TỦ LƯU TRỮ</h2>
+    </div>
+    <div>
+        @Html.ActionLink("BACK", "Index", new { @class = "css-ins" })
+    </div>
+    @using (Html.BeginForm("XuLyThemTu", "DMLT_TuLuuTru", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <table class="table table-striped">
+                <tr>
+                    <td style="font-weight: 700;">
+                        TÊN TỦ
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(model => model.TENTU, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TENTU)
+                    </td>
+                    <td style="font-weight: 700;">
+                        SỐ NGĂN
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.SONGAN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SONGAN)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 700;">
+                        SỐ KỆ ĐẶT
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.SLKE_DAT, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SLKE_DAT)
+                    </td>
+                    <td style="font-weight: 700;">
+                        SỐ KỆ HIỆN TẠI
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.SLKE_HT, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SLKE_HT)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 700;">TRẠNG THÁI</td>
+                    <td colspan="2">
+                        @Html.TextBoxFor(model => model.TRANGTHAI, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TRANGTHAI)
+                    </td>
+                    <td>
+                        <input type="submit" id="submit1" value="Thêm" class="btn btn-danger " />
+                    </td>
+                </tr>
+            </table>  
+        </fieldset>
+    }
+</div>
+
+
+
+

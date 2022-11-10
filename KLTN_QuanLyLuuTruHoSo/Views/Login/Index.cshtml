@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" type="text/css" href="../Template/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../Template/css/style.css" />
+
+<script src="../Template/js/jquery-3.2.1.min.js"></script>
+
+<style>
+    .ck-login--fail {
+        color: red;
+        text-align: center;
+    }
+    form.submitted input:invalid {
+        border: 1px solid red;
+    }
+</style>
+<form id="form1" action="/Login/LoginHandling" method="post">
+    <div style="height: 100vh; ">
+        <div class="main-wrapper account-wrapper">
+            <div class="account-page" style="background-image: url(../Template/images/Background_Login.png); background-size: cover;">
+                <div class="account-center" style="border-radius:5px">
+                    <div class="row account-box" style="border-radius: 5px; box-shadow: 12px 12px 8px 1px rgb(176 176 210 / 20%); height:auto">
+                        <div class="col-md-6" style="border-right: solid;">
+                            <div style="font-size: 25px; font-weight: 700; text-align: center; font-family: KV-AntiquaUltra; color: #180955; ">
+                                <span style="display: block; ">HỆ THỐNG QUẢN LÝ</span>
+                                <span>LƯU TRỮ HỒ SƠ</span>
+                            </div>
+                            <div style="margin-top:10px">
+                                <center>
+                                    <img src="~/Template/images/Login.jpg" style="width: 85%; " />
+                                </center>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-signin">
+                            <div class="account-logo">
+                                <a href="#" class="logo">
+                                    <img src="~/Template/images/img/Login.png" width="900" height="600" alt="" />
+                                </a>
+                            </div>
+                            <div class="form-group" style="display: flex;">
+                                <label style=" margin-top: 5px; font-size: 15px; font-weight: 700;">Username</label>
+                                <input type="text" class="form-control" name="txtUserName" placeholder="Username" style="margin-left: 30px; border-radius: 8px;" required />
+                            </div>
+                            <div class="form-group" style="display: flex;">
+                                <label style=" margin-top: 5px; font-size: 15px; font-weight: 700;">Password</label>
+                                <input type="password" class="form-control" name="txtPassWord" placeholder="Password" style="margin-left: 30px; border-radius: 8px; }" required />
+                            </div>
+                            <div class="form-group text-right" style="display: none !important;">
+                                <a href="forgot-password.html">Forgot your password?</a>
+                            </div>
+                            <div style="height:25px;text-align:center">
+                                @ViewBag.errorMassage
+                            </div>
+                            <div class="form-group text-center" style="margin-top: 20px;">
+                                <input type="submit" id="submitButton" value="Đăng nhập" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    document.getElementById("submitButton").addEventListener("click", function () {
+        document.getElementById("form1").className = "submitted";
+    });
+</script>
